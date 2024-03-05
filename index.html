@@ -10,7 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
@@ -141,6 +141,7 @@
               <span class="merah">U</span>rusan
               <span class="merah">P</span>roduksi
             </p>
+            <p class="pUpdateData">Update : <span id="updateData"></span></p>
           </div>
         </div>
         <div class="col">
@@ -148,7 +149,12 @@
             <div class="card-body">
               <h5 class="card-title">Produksi Tahun 2024</h5>
               <canvas id="produksiHome"></canvas>
-              <p class="card-text">Update : 1 Maret 2024</p>
+              <p class="card-text">
+                Sum : <span id="sumProduksi"></span> m<sup>3</sup>
+              </p>
+              <p class="card-text">
+                Avg : <span id="rataProduksi"></span> m<sup>3</sup>
+              </p>
               <a href="#" class="card-link">Lihat detail</a>
             </div>
           </div>
@@ -160,7 +166,9 @@
             <div class="card-body">
               <h5 class="card-title">Pemakaian Koagulan - PAC - 2024</h5>
               <canvas id="koagulanHome"></canvas>
-              <p class="card-text">Update : 17 Februari 2024</p>
+              <p class="card-text">Sum : <span id="sumPac"></span> Kg</p>
+              <p class="card-text">Avg : <span id="rataPac"></span> Kg</p>
+              <p class="card-text">Dosage : <span id="dosisPac"></span> mg/l</p>
               <a href="#" class="card-link">Lihat detail</a>
             </div>
           </div>
@@ -170,7 +178,11 @@
             <div class="card-body">
               <h5 class="card-title">Pemakaian Disinfektan - Kaporit - 2024</h5>
               <canvas id="disinfektanHome"></canvas>
-              <p class="card-text">Update : 17 Februari 2024</p>
+              <p class="card-text">Sum : <span id="sumKaporit"></span> Kg</p>
+              <p class="card-text">Avg : <span id="rataKaporit"></span> Kg</p>
+              <p class="card-text">
+                Dosage : <span id="dosisKaporit"></span> mg/l
+              </p>
               <a href="#" class="card-link">Lihat detail</a>
             </div>
           </div>
@@ -209,6 +221,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <script src="js/data_produksi.js"></script>
+    <script src="js/data_pac.js"></script>
+    <script src="js/data_kaporit.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

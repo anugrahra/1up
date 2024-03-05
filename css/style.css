@@ -23,6 +23,14 @@ body {
   line-height: 5rem;
 }
 
+.pUpdateData {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 5rem;
+}
+
 .onestop {
   font-size: 6rem;
 }

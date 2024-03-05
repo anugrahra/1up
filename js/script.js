@@ -1,14 +1,18 @@
+//update
+let updateData = "1 Maret 2024";
+document.getElementById("updateData").innerHTML = updateData;
+
 // produksi
 const produksiHome = document.getElementById("produksiHome");
 
 new Chart(produksiHome, {
   type: "bar",
   data: {
-    labels: ["Januari", "Februari"],
+    labels: labelProduksi,
     datasets: [
       {
         label: "Produksi Air Minum (m3)",
-        data: [139606, 141034],
+        data: dataProduksi,
         borderWidth: 3,
       },
     ],
@@ -28,11 +32,11 @@ const koagulanHome = document.getElementById("koagulanHome");
 new Chart(koagulanHome, {
   type: "bar",
   data: {
-    labels: ["Januari", "Februari"],
+    labels: labelPac,
     datasets: [
       {
         label: "PAC (kg)",
-        data: [2950, 3900],
+        data: dataPac,
         borderColor: "#FFA500",
         backgroundColor: "rgba(255,165,0,0.5)",
         borderWidth: 3,
@@ -54,11 +58,11 @@ const disinfektanHome = document.getElementById("disinfektanHome");
 new Chart(disinfektanHome, {
   type: "bar",
   data: {
-    labels: ["Januari", "Februari"],
+    labels: labelKaporit,
     datasets: [
       {
         label: "Kaporit (kg)",
-        data: [420, 405],
+        data: dataKaporit,
         borderColor: "#E5E4E2",
         backgroundColor: "rgba(229,228,226,0.5)",
         borderWidth: 3,
