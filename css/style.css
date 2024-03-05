@@ -46,9 +46,8 @@ body {
   padding-bottom: 0;
 }
 
-.card-link {
-  margin-top: 0;
-  padding-top: 0;
+.cardlink {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
