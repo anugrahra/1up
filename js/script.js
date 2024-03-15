@@ -1,6 +1,7 @@
 //update
 let updateData = "1 Maret 2024";
 document.getElementById("updateData").innerHTML = updateData;
+document.getElementById("updateDataMobile").innerHTML = updateData;
 
 // produksi
 const produksiHome = document.getElementById("produksiHome");
