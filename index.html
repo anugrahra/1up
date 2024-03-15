@@ -41,11 +41,26 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Produksi Air Minum
+                Calculator
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Bulanan</a></li>
-                <li><a class="dropdown-item" href="#">Tahunan</a></li>
+                <li>
+                  <a class="dropdown-item" href="https://kaldopus.netlify.app"
+                    >Kalkulator Pompa Dosing Pulsafeeder</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://kaldotac.netlify.app"
+                    >Kalkulator Pompa Dosing Tacmina</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://anugrahra.github.io/kalipa"
+                    >Kalkulator IPA</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="nav-item dropdown">
@@ -56,74 +71,18 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Kualitas Air
+                Annual Report
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Bulanan</a></li>
-                <li><a class="dropdown-item" href="#">Tahunan</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.canva.com/design/DAF58K38Vds/4SBq8zUVFys6AS8Hnz6ImQ/view?utm_content=DAF58K38Vds&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                    >2023</a
+                  >
+                </li>
               </ul>
             </div>
-            <div class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Bahan Kimia
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Bulanan</a></li>
-                <li><a class="dropdown-item" href="#">Tahunan</a></li>
-              </ul>
-            </div>
-            <div class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Uji Laboratorium
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Bulanan</a></li>
-                <li><a class="dropdown-item" href="#">Tahunan</a></li>
-              </ul>
-            </div>
-            <div class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Pemeliharaan
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Bulanan</a></li>
-                <li><a class="dropdown-item" href="#">Tahunan</a></li>
-              </ul>
-            </div>
-            <div class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Pengolahan Air 101
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Tentang IPA</a></li>
-                <li><a class="dropdown-item" href="#">How To</a></li>
-              </ul>
-            </div>
-            <a class="nav-link" href="#">Tentang</a>
           </div>
         </div>
       </div>
@@ -148,14 +107,34 @@
           <a href="" class="cardlink">
             <div class="card shadow">
               <div class="card-body">
-                <h5 class="card-title">Produksi Tahun 2024</h5>
-                <canvas id="produksiHome"></canvas>
-                <p class="card-text">
-                  Sum : <span id="sumProduksi"></span> m<sup>3</sup>
-                </p>
-                <p class="card-text">
-                  Avg : <span id="rataProduksi"></span> m<sup>3</sup>
-                </p>
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <td><b>Air Baku Dimanfaatkan</b></td>
+                      <td><b>:</b></td>
+                      <td>56.29 lps</td>
+                    </tr>
+                    <tr>
+                      <td><b>Waktu Operasi</b></td>
+                      <td><b>:</b></td>
+                      <td>22.55 jam/hari</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="" class="cardlink">
+                  <div class="card shadow">
+                    <div class="card-body">
+                      <h5 class="card-title">Produksi Tahun 2024</h5>
+                      <canvas id="produksiHome"></canvas>
+                      <p class="card-text">
+                        Sum : <span id="sumProduksi"></span> m<sup>3</sup>
+                      </p>
+                      <p class="card-text">
+                        Avg : <span id="rataProduksi"></span> m<sup>3</sup>
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </a>
