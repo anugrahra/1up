@@ -1,5 +1,5 @@
-labelPac = ["Januari", "Februari"];
-dataPac = [2950, 3900];
+labelPac = ["Januari", "Februari", "Maret"];
+dataPac = [2950, 3900, 4100];
 
 //rata-rata
 let sumPac = 0;
