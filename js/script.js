@@ -1,5 +1,5 @@
 //update
-let updateData = "1 April 2024";
+let updateData = "1 Mei 2024";
 document.getElementById("updateData").innerHTML = updateData;
 document.getElementById("updateDataMobile").innerHTML = updateData;
 

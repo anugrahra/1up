@@ -1,5 +1,5 @@
-labelProduksi = ["Januari", "Februari", "Maret"];
-dataProduksi = [139606, 141034, 144271];
+labelProduksi = ["Januari", "Februari", "Maret", "April"];
+dataProduksi = [139606, 141034, 144271, 124996];
 
 //rata-rata
 let sumProduksi = 0;

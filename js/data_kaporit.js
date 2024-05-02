@@ -1,5 +1,5 @@
-labelKaporit = ["Januari", "Februari", "Maret"];
-dataKaporit = [420, 405, 370];
+labelKaporit = ["Januari", "Februari", "Maret", "April"];
+dataKaporit = [420, 405, 370, 305];
 
 //rata-rata
 let sumKaporit = 0;
