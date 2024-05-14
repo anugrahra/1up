@@ -1,80 +1,68 @@
-//update
-let updateData = "1 Mei 2024";
+// Update
+const updateData = "1 Mei 2024";
 document.getElementById("updateData").innerHTML = updateData;
 document.getElementById("updateDataMobile").innerHTML = updateData;
 
-// produksi
-const produksiHome = document.getElementById("produksiHome");
-
-new Chart(produksiHome, {
-  type: "bar",
-  data: {
-    labels: labelProduksi,
-    datasets: [
-      {
-        label: "Produksi Air Minum (m3)",
-        data: dataProduksi,
-        borderWidth: 3,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
+// Fungsi untuk membuat grafik
+function createChart(
+  elementId,
+  labels,
+  data,
+  label,
+  borderColor,
+  backgroundColor
+) {
+  const ctx = document.getElementById(elementId).getContext("2d");
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: label,
+          data: data,
+          borderColor: borderColor,
+          backgroundColor: backgroundColor,
+          borderWidth: 3,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
       },
     },
-  },
-});
+  });
+}
 
-// koagulan
-const koagulanHome = document.getElementById("koagulanHome");
+// Produksi
+createChart(
+  "produksiHome",
+  labelProduksi,
+  dataProduksi,
+  "Produksi Air Minum (m3)",
+  undefined,
+  undefined
+);
 
-new Chart(koagulanHome, {
-  type: "bar",
-  data: {
-    labels: labelPac,
-    datasets: [
-      {
-        label: "PAC (kg)",
-        data: dataPac,
-        borderColor: "#FFA500",
-        backgroundColor: "rgba(255,165,0,0.5)",
-        borderWidth: 3,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-});
+// Koagulan - PAC
+createChart(
+  "koagulanHome",
+  labelPac,
+  dataPac,
+  "PAC (kg)",
+  "#FFA500",
+  "rgba(255,165,0,0.5)"
+);
 
-// disinfektan
-const disinfektanHome = document.getElementById("disinfektanHome");
-
-new Chart(disinfektanHome, {
-  type: "bar",
-  data: {
-    labels: labelKaporit,
-    datasets: [
-      {
-        label: "Kaporit (kg)",
-        data: dataKaporit,
-        borderColor: "#E5E4E2",
-        backgroundColor: "rgba(229,228,226,0.5)",
-        borderWidth: 3,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-});
+// Disinfektan - Kaporit
+createChart(
+  "disinfektanHome",
+  labelKaporit,
+  dataKaporit,
+  "Kaporit (kg)",
+  "#E5E4E2",
+  "rgba(229,228,226,0.5)"
+);
