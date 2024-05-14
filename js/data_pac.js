@@ -1,14 +1,11 @@
-labelPac = ["Januari", "Februari", "Maret", "April"];
-dataPac = [2950, 3900, 4100, 3450];
+const labelPac = ["Januari", "Februari", "Maret", "April"];
+const dataPac = [2950, 3900, 4100, 3450];
 
-//rata-rata
-let sumPac = 0;
-for (let i = 0; i < dataPac.length; i++) {
-  sumPac += dataPac[i];
-}
+// Rata-rata
+const sumPac = dataPac.reduce((acc, val) => acc + val, 0);
 const rataPac = sumPac / dataPac.length;
 
-let dosisPac = (sumPac * 1000000) / (sumProduksi * 1000);
+const dosisPac = (sumPac * 1000000) / (sumProduksi * 1000);
 
 document.getElementById("sumPac").innerHTML = sumPac;
 document.getElementById("rataPac").innerHTML = rataPac;

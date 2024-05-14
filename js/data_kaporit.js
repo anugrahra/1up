@@ -1,14 +1,11 @@
-labelKaporit = ["Januari", "Februari", "Maret", "April"];
-dataKaporit = [420, 405, 370, 305];
+const labelKaporit = ["Januari", "Februari", "Maret", "April"];
+const dataKaporit = [420, 405, 370, 305];
 
-//rata-rata
-let sumKaporit = 0;
-for (let i = 0; i < dataKaporit.length; i++) {
-  sumKaporit += dataKaporit[i];
-}
+// Rata-rata
+const sumKaporit = dataKaporit.reduce((acc, val) => acc + val, 0);
 const rataKaporit = sumKaporit / dataKaporit.length;
 
-let dosisKaporit = (sumKaporit * 1000000) / (sumProduksi * 1000);
+const dosisKaporit = (sumKaporit * 1000000) / (sumProduksi * 1000);
 
 document.getElementById("sumKaporit").innerHTML = sumKaporit;
 document.getElementById("rataKaporit").innerHTML = rataKaporit;
