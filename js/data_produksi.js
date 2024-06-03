@@ -1,6 +1,6 @@
 const labelProduksi = ["Januari", "Februari", "Maret", "April", "Mei"];
 const jumlahHari = [31, 29, 31, 30, 31];
-const dataProduksi = [139606, 141034, 144271, 124996, 135645];
+const dataProduksi = [139606, 141034, 144271, 126536, 135645];
 const waktuOperasi = [677, 654, 653, 614, 683];
 
 // rata-rata jumlah produksi
