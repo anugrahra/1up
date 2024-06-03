@@ -1,5 +1,5 @@
 // Update
-const updateData = "1 Mei 2024";
+const updateData = "1 Juni 2024";
 document.getElementById("updateData").innerHTML = updateData;
 document.getElementById("updateDataMobile").innerHTML = updateData;
 

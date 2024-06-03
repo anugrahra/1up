@@ -1,5 +1,5 @@
-const labelPac = ["Januari", "Februari", "Maret", "April"];
-const dataPac = [2950, 3900, 4100, 3450];
+const labelPac = ["Januari", "Februari", "Maret", "April", "Mei"];
+const dataPac = [2950, 3900, 4100, 3450, 2950];
 
 // Rata-rata
 const sumPac = dataPac.reduce((acc, val) => acc + val, 0);
