@@ -8,5 +8,5 @@ const rataPac = sumPac / dataPac.length;
 const dosisPac = (sumPac * 1000000) / (sumProduksi * 1000);
 
 document.getElementById("sumPac").innerHTML = sumPac;
-document.getElementById("rataPac").innerHTML = rataPac;
+document.getElementById("rataPac").innerHTML = rataPac.toFixed(2);
 document.getElementById("dosisPac").innerHTML = dosisPac.toFixed(2);
