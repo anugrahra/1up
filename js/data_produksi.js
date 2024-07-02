@@ -20,4 +20,4 @@ document.getElementById("kapasitasDimanfaatkan").innerHTML =
 document.getElementById("rataWaktuOperasi").innerHTML =
   rataWaktuOperasi.toFixed(2);
 document.getElementById("sumProduksi").innerHTML = sumProduksi;
-document.getElementById("rataProduksi").innerHTML = rataProduksi;
+document.getElementById("rataProduksi").innerHTML = rataProduksi.toFixed(2);
