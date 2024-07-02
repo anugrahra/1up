@@ -1,7 +1,7 @@
-const labelProduksi = ["Januari", "Februari", "Maret", "April", "Mei"];
-const jumlahHari = [31, 29, 31, 30, 31];
-const dataProduksi = [139606, 141034, 144271, 126536, 135645];
-const waktuOperasi = [677, 654, 653, 614, 683];
+const labelProduksi = ["Januari", "Februari", "Maret", "April", "Mei", "Juni"];
+const jumlahHari = [31, 29, 31, 30, 31, 30];
+const dataProduksi = [139606, 141034, 144271, 126536, 135645, 120959];
+const waktuOperasi = [677, 654, 653, 614, 683, 636];
 
 // rata-rata jumlah produksi
 const sumProduksi = dataProduksi.reduce((acc, val) => acc + val, 0);
