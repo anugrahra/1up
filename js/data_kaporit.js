@@ -1,5 +1,5 @@
-const labelKaporit = ["Januari", "Februari", "Maret", "April", "Mei", "Juni"];
-const dataKaporit = [420, 405, 370, 305, 270, 270];
+const labelKaporit = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli"];
+const dataKaporit = [420, 405, 370, 305, 270, 270, 310];
 
 // Rata-rata
 const sumKaporit = dataKaporit.reduce((acc, val) => acc + val, 0);
