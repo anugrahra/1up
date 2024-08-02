@@ -8,5 +8,5 @@ const rataKaporit = sumKaporit / dataKaporit.length;
 const dosisKaporit = (sumKaporit * 1000000) / (sumProduksi * 1000);
 
 document.getElementById("sumKaporit").innerHTML = sumKaporit;
-document.getElementById("rataKaporit").innerHTML = rataKaporit;
+document.getElementById("rataKaporit").innerHTML = rataKaporit.toFixed(2);
 document.getElementById("dosisKaporit").innerHTML = dosisKaporit.toFixed(2);
