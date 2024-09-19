@@ -1,3 +1,16 @@
+const myPopup = new Popup({
+  id: "my-popup",
+  title: '😔',
+  content: `Silakan pilih rentang bulan yang valid`,
+  sideMargin: "2.9vw",
+  titleColor: "#fff",
+  textColor: "#fff",
+  backgroundColor: "#222",
+  closeColor: "#fff",
+  fontSizeMultiplier: 1.2,
+  linkColor: "#888",
+});
+
 // Update
 const updateData = "1 September 2024";
 document.getElementById("updateData").innerHTML = updateData;
@@ -87,7 +100,7 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
 
      // Validasi input
      if (isNaN(dariBulan) || isNaN(sampaiBulan) || dariBulan < 0 || sampaiBulan < 0 || dariBulan > sampaiBulan) {
-         alert("Silakan pilih rentang bulan yang valid.");
+         myPopup.show();
          return;
      }
 
