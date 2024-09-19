@@ -134,7 +134,7 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
      const sumJumlahHari = jumlahHari.slice(dariBulan, sampaiBulan + 1).reduce((acc, val) => acc + val, 0);
      const kapasitasDimanfaatkan = sumProduksi / sumJumlahHari / 24 / 3.6;
      const sumWaktuOperasi = waktuOperasi.slice(dariBulan, sampaiBulan + 1).reduce((acc, val) => acc + val, 0);
-     const rataWaktuOperasi = sumWaktuOperasi / jumlahHari.length;
+     const rataWaktuOperasi = sumWaktuOperasi / sumJumlahHari;
 
      const sumPac = newDataPac.reduce((acc, val) => acc + val, 0);
      const rataPac = sumPac / newDataPac.length;
