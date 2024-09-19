@@ -123,6 +123,42 @@
     </nav>
 
     <div class="container">
+      <div class="row filter">
+        <!-- filter -->
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+          <div class="input-group">
+            <span class="input-group-text">Rentang Bulan</span>
+            <select class="form-select" id="daribulan">
+              <option selected value="0">Choose...</option>
+              <option value="1">Januari</option>
+              <option value="2">Februari</option>
+              <option value="3">Maret</option>
+              <option value="4">April</option>
+              <option value="5">Mei</option>
+              <option value="6">Juni</option>
+              <option value="7">Juli</option>
+              <option value="8">Agustus</option>
+            </select>
+            <select class="form-select" id="sampaibulan">
+              <option selected value="0">Choose...</option>
+              <option value="1">Januari</option>
+              <option value="2">Februari</option>
+              <option value="3">Maret</option>
+              <option value="4">April</option>
+              <option value="5">Mei</option>
+              <option value="6">Juni</option>
+              <option value="7">Juli</option>
+              <option value="8">Agustus</option>
+            </select>
+            <span class="input-group-text">Tahun</span>
+            <select class="form-select" id="tahun">
+              <option value="2024">2024</option>
+            </select>
+            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+          </div>
+        </div>
+        <!-- filter -->
+      </div>
       <div class="row mt-3">
         <div class="col position-relative hilang">
           <div
@@ -238,6 +274,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/data_produksi.js"></script>
     <script src="js/data_pac.js"></script>
     <script src="js/data_kaporit.js"></script>
