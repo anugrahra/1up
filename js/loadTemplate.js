@@ -11,7 +11,7 @@ function loadHTMLTemplate(selector, file) {
         })
         .then(data => {
           element.innerHTML = data;
-          updateNavLinksToAbsolute();
+          updateNavLinksToAbsolute(); // Update after loading template
         })
         .catch(error => {
           console.error("Error loading template:", error);
@@ -23,20 +23,17 @@ function loadHTMLTemplate(selector, file) {
     // Cari semua elemen <a> di dalam navbar
     const navLinks = document.querySelectorAll('nav a');
   
-    // Dapatkan base URL dari lokasi root (origin) tanpa path tambahan
+    // Dapatkan base URL dari lokasi root
     const baseURL = window.location.origin;
   
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
   
-      // Jika href bukan URL absolut dan tidak dimulai dengan "/"
-      if (href && !href.startsWith('http') && !href.startsWith('/')) {
-        // Gabungkan baseURL dengan href untuk membuatnya absolute
-        const absoluteHref = baseURL + '/' + href;
-        link.setAttribute('href', absoluteHref);
-      } else if (href && href.startsWith('/')) {
-        // Jika href sudah dimulai dengan "/", tambahkan baseURL di depan
-        const absoluteHref = baseURL + href;
+      // Jika href adalah "/" atau relatif (tidak mulai dengan http/https), buat absolute
+      if (href === "/") {
+        link.setAttribute('href', baseURL); // Root of the current origin
+      } else if (href && !href.startsWith('http')) {
+        const absoluteHref = baseURL + (href.startsWith('/') ? href : '/' + href);
         link.setAttribute('href', absoluteHref);
       }
     });
