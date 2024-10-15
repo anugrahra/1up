@@ -10,6 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
@@ -20,6 +21,9 @@
         <!-- filter -->
         <div class="row row-cols-lg-auto g-3 align-items-center">
           <div class="input-group">
+            <!-- Tooltip Icon -->
+            <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="top" 
+            title="Pilih bulan awal dan bulan akhir untuk melihat data sesuai rentang. Untuk satu bulan, pilih nama bulan yang sama di kedua pilihan."></i>
             <span class="input-group-text">Rentang Bulan</span>
             <select class="form-select" id="daribulan">
               <option selected value="0">Choose...</option>
