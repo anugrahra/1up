@@ -177,24 +177,54 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
      const kapasitasDimanfaatkan = sumProduksi / sumJumlahHari / 24 / 3.6;
      const sumWaktuOperasi = waktuOperasi.slice(dariBulan, sampaiBulan + 1).reduce((acc, val) => acc + val, 0);
      const rataWaktuOperasi = sumWaktuOperasi / sumJumlahHari;
+     const produksiPerHari = sumProduksi / sumJumlahHari;
 
      const sumPac = newDataPac.reduce((acc, val) => acc + val, 0);
      const rataPac = sumPac / newDataPac.length;
+     const pacPerHari = sumPac / sumJumlahHari;
      const dosisPac = (sumPac * 1000000) / (sumProduksi * 1000);
 
      const sumKaporit = newDataKaporit.reduce((acc, val) => acc + val, 0);
      const rataKaporit = sumKaporit / newDataKaporit.length;
+     const kaporitPerHari = sumKaporit / sumJumlahHari;
      const dosisKaporit = (sumKaporit * 1000000) / (sumProduksi * 1000);
 
      // Perbarui elemen HTML dengan hasil perhitungan terbaru
-     document.getElementById("kapasitasDimanfaatkan").innerHTML = kapasitasDimanfaatkan.toFixed(2);
-     document.getElementById("rataWaktuOperasi").innerHTML = rataWaktuOperasi.toFixed(2);
-     document.getElementById("sumProduksi").innerHTML = sumProduksi;
-     document.getElementById("rataProduksi").innerHTML = rataProduksi.toFixed(2);
-     document.getElementById("sumPac").innerHTML = sumPac;
-     document.getElementById("rataPac").innerHTML = rataPac.toFixed(2);
-     document.getElementById("dosisPac").innerHTML = dosisPac.toFixed(2);
-     document.getElementById("sumKaporit").innerHTML = sumKaporit;
-     document.getElementById("rataKaporit").innerHTML = rataKaporit.toFixed(2);
-     document.getElementById("dosisKaporit").innerHTML = dosisKaporit.toFixed(2);
+    const elementIds = [
+      "kapasitasDimanfaatkan",
+      "rataWaktuOperasi",
+      "sumProduksi",
+      "rataProduksi",
+      "produksiPerHari",
+      "sumPac",
+      "pacPerHari",
+      "rataPac",
+      "dosisPac",
+      "sumKaporit",
+      "kaporitPerHari",
+      "rataKaporit",
+      "dosisKaporit"
+    ];
+
+    // Daftar nilai yang ingin diformat
+    const values = [
+      kapasitasDimanfaatkan,
+      rataWaktuOperasi,
+      sumProduksi,
+      rataProduksi,
+      produksiPerHari,
+      sumPac,
+      pacPerHari,
+      rataPac,
+      dosisPac,
+      sumKaporit,
+      kaporitPerHari,
+      rataKaporit,
+      dosisKaporit
+    ];
+
+    // Memperbarui konten setiap elemen dengan nilai yang sudah diformat
+    elementIds.forEach((id, index) => {
+      document.getElementById(id).innerHTML = formatNumber(values[index]);
+    });
  });
