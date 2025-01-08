@@ -1,4 +1,4 @@
-const updateData = "1 Desember 2024";
+const updateData = "1 Januari 2025";
 
 // tooltip
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
