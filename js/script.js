@@ -1,6 +1,7 @@
 // Update
 document.getElementById("updateData").innerHTML = updateData;
 document.getElementById("updateDataMobile").innerHTML = updateData;
+document.getElementById("labelAtas").innerHTML = "Tahun " + currentYear;
 
  // Inisialisasi chart
  let produksiChart = null;
@@ -53,17 +54,17 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
  // Inisialisasi chart pertama kali
  produksiChart = createChart(
      "produksiHome",
-     labelProduksi,
-     dataProduksi,
-     "Produksi Air Minum (m3)",
+     dataProduksiTahun[currentYear].labelProduksi,
+     dataProduksiTahun[currentYear].dataProduksi,
+     `Produksi Air Minum (${currentYear})`,
      undefined,
      undefined
  );
 
  koagulanChart = createChart(
      "koagulanHome",
-     labelPac,
-     dataPac,
+     dataPacTahun[currentYear].labelPac,
+     dataPacTahun[currentYear].dataPac,
      "PAC (kg)",
      "#FFA500",
      "rgba(255,165,0,0.5)"
@@ -71,8 +72,8 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
 
  disinfektanChart = createChart(
      "disinfektanHome",
-     labelKaporit,
-     dataKaporit,
+     dataKaporitTahun[currentYear].labelKaporit,
+     dataKaporitTahun[currentYear].dataKaporit,
      "Kaporit (kg)",
      "#E5E4E2",
      "rgba(229,228,226,0.5)"
@@ -84,6 +85,10 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
      const sampaiBulan = parseInt(document.getElementById("sampaibulan").value) - 1;  // Indeks akhir
      const tahun = document.getElementById("tahun").value;  // Ambil tahun yang dipilih
 
+     // ganti tahun current
+     currentYear = tahun;
+     console.log(currentYear);
+
      // Validasi input
      if (isNaN(dariBulan) || isNaN(sampaiBulan) || dariBulan < 0 || sampaiBulan < 0 || dariBulan > sampaiBulan) {
          myPopup.show();
@@ -91,10 +96,10 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
      }
 
      // Potong data dan label berdasarkan rentang yang dipilih
-     const newLabels = labelProduksi.slice(dariBulan, sampaiBulan + 1).map(label => label + " " + tahun);
-     const newDataProduksi = dataProduksi.slice(dariBulan, sampaiBulan + 1);
-     const newDataPac = dataPac.slice(dariBulan, sampaiBulan + 1);
-     const newDataKaporit = dataKaporit.slice(dariBulan, sampaiBulan + 1);
+     const newLabels = dataProduksiTahun[currentYear].labelProduksi.slice(dariBulan, sampaiBulan + 1).map(label => label + " " + tahun);
+     const newDataProduksi = dataProduksiTahun[currentYear].dataProduksi.slice(dariBulan, sampaiBulan + 1);
+     const newDataPac = dataPacTahun[currentYear].dataPac.slice(dariBulan, sampaiBulan + 1);
+     const newDataKaporit = dataKaporitTahun[currentYear].dataKaporit.slice(dariBulan, sampaiBulan + 1);
 
      // update label di atas
      function getBulan(nomorBulan) {
@@ -173,9 +178,9 @@ document.getElementById("updateDataMobile").innerHTML = updateData;
      // Hitung total dan rata-rata untuk data yang telah difilter
      const sumProduksi = newDataProduksi.reduce((acc, val) => acc + val, 0);
      const rataProduksi = sumProduksi / newDataProduksi.length;
-     const sumJumlahHari = jumlahHari.slice(dariBulan, sampaiBulan + 1).reduce((acc, val) => acc + val, 0);
+     const sumJumlahHari = dataProduksiTahun[currentYear].jumlahHari.slice(dariBulan, sampaiBulan + 1).reduce((acc, val) => acc + val, 0);
      const kapasitasDimanfaatkan = sumProduksi / sumJumlahHari / 24 / 3.6;
-     const sumWaktuOperasi = waktuOperasi.slice(dariBulan, sampaiBulan + 1).reduce((acc, val) => acc + val, 0);
+     const sumWaktuOperasi = dataProduksiTahun[currentYear].waktuOperasi.slice(dariBulan, sampaiBulan + 1).reduce((acc, val) => acc + val, 0);
      const rataWaktuOperasi = sumWaktuOperasi / sumJumlahHari;
      const produksiPerHari = sumProduksi / sumJumlahHari;
 

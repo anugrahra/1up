@@ -1,3 +1,6 @@
+// default tahun sekarang / new Date().getFullYear();
+let currentYear = new Date().getFullYear();
+
 const updateData = "1 Januari 2025";
 
 // tooltip

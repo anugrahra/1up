@@ -1,2 +1,10 @@
-const labelKaporit = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-const dataKaporit = [420, 405, 370, 305, 270, 270, 310, 380, 465, 520, 480, 460];
+const dataKaporitTahun = {
+    2025 : {
+        labelKaporit : ["Januari"],
+        dataKaporit : [420]
+    },
+    2024 : {
+        labelKaporit : ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+        dataKaporit : [420, 405, 370, 305, 270, 270, 310, 380, 465, 520, 480, 460]
+    }
+}
