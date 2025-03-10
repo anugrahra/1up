@@ -1,7 +1,7 @@
 const dataKaporitTahun = {
     2025 : {
-        labelKaporit : ["Januari"],
-        dataKaporit : [420]
+        labelKaporit : ["Januari", "Februari"],
+        dataKaporit : [420, 430]
     },
     2024 : {
         labelKaporit : ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],

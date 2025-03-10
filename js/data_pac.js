@@ -1,7 +1,7 @@
 const dataPacTahun = {
     2025 : {
-        labelPac : ["Januari"],
-        dataPac : [2950]
+        labelPac : ["Januari", "Februari"],
+        dataPac : [2950, 2200]
     },
     2024 : {
         labelPac : ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agutus", "September", "Oktober", "November", "Desember"],
