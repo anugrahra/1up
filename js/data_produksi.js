@@ -1,8 +1,8 @@
 const dataProduksiTahun = {
   2025: {
-    labelProduksi: ["Januari", "Februari", "Maret", "April", "Mei"],
-    jumlahHari: [31, 28, 31, 30, 31],
-    dataProduksi: [144475, 132881, 163224, 163527, 173678],
+    labelProduksi: ["Januari", "Februari", "Maret", "April", "Mei", "Juni"],
+    jumlahHari: [31, 28, 31, 30, 31, 30],
+    dataProduksi: [144475, 132881, 163224, 163527, 173678, 164981],
     waktuOperasi: [677, 652, 736, 716, 743]
   },
   2024: {
