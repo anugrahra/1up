@@ -142,7 +142,7 @@ document.getElementById("labelAtas").innerHTML = "Tahun " + currentYear;
     let fromBulan = getBulan(dariBulan);
     let toBulan = getBulan(sampaiBulan);
     
-     document.getElementById("labelAtas").innerHTML = fromBulan + ' - ' + toBulan + ' 2024';
+     document.getElementById("labelAtas").innerHTML = fromBulan + ' - ' + toBulan + ' ' + tahun;
 
      // Hancurkan chart lama jika ada
      destroyChartsIfExist();
