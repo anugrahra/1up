@@ -1,9 +1,9 @@
 const dataProduksiTahun = {
   2026: {
-    labelProduksi: [null],
-    jumlahHari: [null],
-    dataProduksi: [null],
-    waktuOperasi: [null]
+    labelProduksi: ["Januari"],
+    jumlahHari: [31],
+    dataProduksi: [164832],
+    waktuOperasi: [707]
   },
   2025: {
     labelProduksi: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],

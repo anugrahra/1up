@@ -1,7 +1,7 @@
 // default tahun sekarang / new Date().getFullYear();
 let currentYear = new Date().getFullYear();
 
-const updateData = "1 Januari 2026";
+const updateData = "1 Februari 2026";
 
 // tooltip
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
